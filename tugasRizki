@@ -1,0 +1,47 @@
+// Nama : Rizki Permana Hadi
+// NIM : 23104410013
+// KELAS : TI A
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   
+    string namaKaryawan;
+    int golongan, jam_kerja, upah, lembur, gaji;
+
+    cout << "Masukkan nama karyawan: ";
+    cin >> namaKaryawan;
+    cout << "Masukkan golongan kerja: ";
+    cin >> golongan;
+    cout << "Masukkan jam kerja per minggu: ";
+    cin >> jam_kerja;
+
+    switch (golongan) {
+    case 1:
+        upah = 25000;
+        break;
+    case 2:
+        upah = 35000;
+        break;
+    case 3:
+        upah = 50000;
+        break;
+    }
+  
+    if (jam_kerja > 48) {
+        lembur = (jam_kerja - 48) * 10000;
+    }
+    else {
+        lembur = 0;
+    }
+
+    gaji = (upah * jam_kerja) + lembur;
+
+    cout << "Nama karyawan: " << namaKaryawan << endl;
+    cout << "Golongan kerja: " << golongan << endl;
+    cout << "Jam kerja per minggu: " << jam_kerja << endl;
+    cout << "Gaji per minggu: Rp " << gaji << endl;
+
+    return 0;
+}
